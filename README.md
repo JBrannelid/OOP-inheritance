@@ -6,7 +6,7 @@ This project demonstrates the principles of Object-Oriented Programming (OOP) us
 
 ## Features
 
-- **Animal Hierarchy:** Implements a class structure for different animals, including mammals, reptiles, humans and specific animal types like lions, seals, and giraffes.
+- **Animal Hierarchy:** Implements a class structure for different animals, including mammals, reptiles, humans, and specific animal types like lions, seals, and giraffes.
 - **Polymorphism:** Uses method overriding to allow derived classes to provide specific implementations for shared behaviors such as `MakeSound`, `Move`, and `Eat`.
 - **Default Constructors:** Each animal class has default constructors for easy instantiation with common values.
 - **Interfaces:** Defines a common interface `ICreature` to standardize properties and behaviors across different creature types.
@@ -51,7 +51,7 @@ namespace OOP_Inheritance
         }
     }
 }
-
+```
 
 ### Prerequisites
 
@@ -64,3 +64,8 @@ namespace OOP_Inheritance
    ```bash
    git clone https://github.com/JBrannelid/OOP-inheritance.git
    cd oop-inheritance-project
+   ```
+
+2. Open the project in your preferred IDE.
+3. Build and run the project to see the animal behaviors in action.
+```
