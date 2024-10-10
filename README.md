@@ -67,5 +67,3 @@ namespace OOP_Inheritance
    ```
 
 2. Open the project in your preferred IDE.
-3. Build and run the project to see the animal behaviors in action.
-```
