@@ -8,6 +8,7 @@ namespace OOP_inheritance.Models.ChildClass
             : base(type, gender, name, weight, age, speed, typeOfAnimal)
         {
         }
+
         // Override constructor with default values for safty of the program
         public SnowLeopard() : this("Snow Leopard", "Male", "John-Snow", 50, 7, 10, AnimalType.Wild)
         { }

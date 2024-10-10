@@ -7,10 +7,10 @@ namespace OOP_inheritance.Abstracts
     public abstract class Human : ICreature
     {
         // Fields representing the characteristics of a human
-        public string Gender { get; set; } 
+        public string Gender { get; set; }
 
         public string Name { get; set; }
-        public int Age { get; set; } 
+        public int Age { get; set; }
         public AnimalType TypeOfAnimal { get; set; } = AnimalType.Wild;
 
         // Constructor to initialize human properties

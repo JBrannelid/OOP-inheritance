@@ -8,9 +8,11 @@ namespace OOP_inheritance.Models.ChildClass
             : base(type, gender, name, weight, age, speed, typeOfAnimal)
         {
         }
+
         // Override constructor with default values for safty of the program
         public Leopard() : this("Leopard", "Male", "Leonardo", 90, 3, 50, AnimalType.Wild)
         { }
+
         public override void MakeSound()
         {
             Console.WriteLine($"The {Type} {Name} roars.");

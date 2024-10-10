@@ -1,5 +1,4 @@
 ﻿using OOP_inheritance.Enums;
-using OOP_inheritance.Interfaces;
 
 namespace OOP_inheritance.Abstracts
 {

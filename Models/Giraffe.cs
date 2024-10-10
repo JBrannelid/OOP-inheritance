@@ -12,8 +12,9 @@ namespace OOP_inheritance.Models
         {
             _height = height;
         }
+
         // Override constructor with default values for safty of the program
-        public Giraffe() :this("Giraffe", "Female", "Giraffiii", 800, 4, 430, AnimalType.Wild)
+        public Giraffe() : this("Giraffe", "Female", "Giraffiii", 800, 4, 430, AnimalType.Wild)
         { }
 
         public override void PrintInfo()
@@ -21,6 +22,7 @@ namespace OOP_inheritance.Models
             base.PrintInfo();
             Console.WriteLine($"Height: {_height}");
         }
+
         public override void MakeSound()
         {
             Console.WriteLine($"The giraffe {Name} bleats.");

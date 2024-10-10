@@ -12,6 +12,7 @@ namespace OOP_inheritance.Models
         {
             Color = color; // Set the seal's color
         }
+
         // Overloaded constructor with default values
         public Seal() : this("Harbor Seal", "Female", "Bubbles", 150, 10, "Silver", AnimalType.Wild)
         {
@@ -28,6 +29,7 @@ namespace OOP_inheritance.Models
         {
             Console.WriteLine($"The {Type} {Name} barks.");
         }
+
         public override void Move()
         {
             Console.WriteLine($"The {Type} {Name} is clumpsy on land.");
@@ -38,6 +40,7 @@ namespace OOP_inheritance.Models
         {
             Console.WriteLine($"The {Type} {Name} is eating {foodType}.");
         }
+
         public void Swim()
         {
             Console.WriteLine($"{Name} is in water and an incredibly efficient swimmer.");

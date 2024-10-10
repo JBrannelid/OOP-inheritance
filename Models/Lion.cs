@@ -13,6 +13,7 @@ namespace OOP_inheritance.Models
         {
             Speed = speed;
         }
+
         // Override constructor with default values for safty of the program
         public Lion() : this("African Lion", "Male", "Leon", 190, 5, 50, AnimalType.Wild)
         {
@@ -34,6 +35,7 @@ namespace OOP_inheritance.Models
         {
             Console.WriteLine($"The lion {Name} prowls through the grass, stalking its prey.");
         }
+
         public void Eat(FoodType foodType = FoodType.meat)
         {
             Console.WriteLine($"The lion {Name} is eating {foodType}.");

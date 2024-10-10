@@ -4,7 +4,6 @@
 // Course:       Programmering med C# och .NET
 // Lab 6:        OOP Arv
 
-using OOP_inheritance.Abstracts;
 using OOP_inheritance.Enums;
 using OOP_inheritance.Interfaces;
 using OOP_inheritance.Models;
@@ -38,7 +37,6 @@ namespace OOP_Inheritance
         // Display information about each creatures and specifik actions base on the type of creature
         public static void DisplayInfo(List<ICreature> creatures)
         {
-
             // Let Lion, Giraffe, Seal do a specifik actions
             // Call foodtype collect from enum Foodtype and initilized in specific class
             foreach (ICreature animal in creatures)
@@ -51,19 +49,22 @@ namespace OOP_Inheritance
                         lion.ShowSpeed();
                         lion.Eat(); // default is meat
                         break;
+
                     case Giraffe giraffe:
                         giraffe.FindFood();
                         giraffe.Eat(); // default is leaves
                         break;
+
                     case Seal seal:
                         seal.Eat(); // default is fish
                         seal.Move();
                         break;
+
                     case Person person:
                         person.Eat(); // default is unknown
                         break;
                 }
-                Console.WriteLine(); // New line for better console readability 
+                Console.WriteLine(); // New line for better console readability
             }
         }
     }

@@ -1,6 +1,5 @@
 ﻿using OOP_inheritance.Abstracts;
 using OOP_inheritance.Enums;
-using System.Drawing;
 
 namespace OOP_inheritance.Models
 {
@@ -10,10 +9,12 @@ namespace OOP_inheritance.Models
             : base(gender, name, age, typeOfAnimal)
         {
         }
+
         // Override constructor with default values for safty of the program
         public Person() : this("Male", "Carl", 24, AnimalType.Domestic)
         {
         }
+
         public override void MakeSound()
         {
             Console.WriteLine($"The {Gender} human {Name} is conversating.");
@@ -23,6 +24,7 @@ namespace OOP_inheritance.Models
         {
             Console.WriteLine($"{Name} is walking forwards on two legs.");
         }
+
         public void Eat(FoodType foodType = FoodType.unknown)
         {
             Console.WriteLine($"{Name} is eating {foodType}");
