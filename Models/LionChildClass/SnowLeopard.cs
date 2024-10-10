@@ -15,22 +15,22 @@ namespace OOP_inheritance.Models.ChildClass
 
         public override void MakeSound()
         {
-            Console.WriteLine($"The SnowLeopard {Name} roars!!.");
+            Console.WriteLine($"The {Type} {Name} roars!!.");
         }
 
         public override void Move()
         {
-            Console.WriteLine($"The SnowLeopard {Name} is hunting.");
+            Console.WriteLine($"The {Type} {Name} is hunting.");
         }
 
-        public new void Eat(FoodType foodType = FoodType.meat)
+        public override void Eat()
         {
-            Console.WriteLine($"The SnowLeopard {Name} is eating {foodType}.");
+            Console.WriteLine($"The {Type} {Name} is eating {FoodType.meat}.");
         }
 
         public override void ShowSpeed()
         {
-            Console.WriteLine($"The SnowLeopard {Name} is running at {Speed}km/h");
+            Console.WriteLine($"The {Type} {Name} is running at {Speed}km/h");
         }
     }
 }

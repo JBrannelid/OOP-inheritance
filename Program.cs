@@ -8,6 +8,7 @@ using OOP_inheritance.Enums;
 using OOP_inheritance.Interfaces;
 using OOP_inheritance.Models;
 using OOP_inheritance.Models.ChildClass;
+using System;
 
 namespace OOP_Inheritance
 {
@@ -29,17 +30,20 @@ namespace OOP_Inheritance
             creatures.Add(new Leopard()); // Add default Leopard
 
             // Call the method to display info
-            DisplayInfo(creatures);
-
+            DisplayCreatureInfo(creatures);
             Console.ReadKey();
+            Console.Clear();
+            Displayinfo(creatures);
+            Console.ReadKey();
+
         }
 
         // Display information about each creatures and specifik actions base on the type of creature
-        public static void DisplayInfo(List<ICreature> creatures)
+        public static void DisplayCreatureInfo(List<ICreature> creatures)
         {
             // Let Lion, Giraffe, Seal do a specifik actions
             // Call foodtype collect from enum Foodtype and initilized in specific class
-            foreach (ICreature animal in creatures)
+            foreach (var animal in creatures)
             {
                 animal.MakeSound(); // Let every animal make a sound
 
@@ -64,6 +68,15 @@ namespace OOP_Inheritance
                         person.Eat(); // default is unknown
                         break;
                 }
+                Console.WriteLine(); // New line for better console readability
+            }
+        }
+        // Call PrintInfo on each creature in list creatures
+        public static void Displayinfo(List<ICreature> creatures)
+        {
+            foreach (var creature in creatures)
+            {
+                creature.PrintInfo(); 
                 Console.WriteLine(); // New line for better console readability
             }
         }

@@ -23,9 +23,9 @@ namespace OOP_inheritance.Models.ChildClass
             Console.WriteLine($"The {Type} {Name} is hunting.");
         }
 
-        public new void Eat(FoodType foodType = FoodType.meat)
+        public override void Eat()
         {
-            Console.WriteLine($"The {Type} {Name} is eating {foodType}.");
+            Console.WriteLine($"The {Type} {Name} is eating {FoodType.meat}.");
         }
 
         public override void ShowSpeed()

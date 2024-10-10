@@ -13,7 +13,7 @@ namespace OOP_inheritance.Models
             Color = color; // Set the seal's color
         }
 
-        // Overloaded constructor with default values
+        // Override constructor with default values for safty of the program
         public Seal() : this("Harbor Seal", "Female", "Bubbles", 150, 10, "Silver", AnimalType.Wild)
         {
         }
@@ -21,7 +21,7 @@ namespace OOP_inheritance.Models
         // Override PrintInfo to include seal-specific information
         public override void PrintInfo()
         {
-            base.PrintInfo();
+            base.PrintInfo(); // Call the PrintInfo method from the base class
             Console.WriteLine($"Color: {Color}");
         }
 
@@ -36,9 +36,9 @@ namespace OOP_inheritance.Models
             Swim(); // Call the Swim method to describe swimming behavior
         }
 
-        public void Eat(FoodType foodType = FoodType.fish)
+        public override void Eat()
         {
-            Console.WriteLine($"The {Type} {Name} is eating {foodType}.");
+            Console.WriteLine($"The {Type} {Name} is eating {FoodType.fish}.");
         }
 
         public void Swim()

@@ -5,8 +5,10 @@ namespace OOP_inheritance.Abstracts
 {
     // Abstract class representing a Animal, implementing the ICreature interface
     public abstract class Animal : ICreature
-    {    // Fields representing the characteristics of a Animal
+    {
+        // Fields representing the characteristics of a Animal
         public string Type { get; }
+
         public string Gender { get; set; }
         public string Name { get; set; }
         public double Weight { get; }
@@ -38,9 +40,6 @@ namespace OOP_inheritance.Abstracts
 
         public abstract void Move();
 
-        public virtual void Eat(FoodType foodType = FoodType.unknown)
-        {
-            Console.WriteLine($"{Name} is eating {foodType}.");
-        }
+        public abstract void Eat();
     }
 }

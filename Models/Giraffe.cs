@@ -19,28 +19,28 @@ namespace OOP_inheritance.Models
 
         public override void PrintInfo()
         {
-            base.PrintInfo();
+            base.PrintInfo(); // Call the PrintInfo method from the base class
             Console.WriteLine($"Height: {_height}");
         }
 
         public override void MakeSound()
         {
-            Console.WriteLine($"The giraffe {Name} bleats.");
+            Console.WriteLine($"The {Type} {Name} bleats.");
         }
 
         public override void Move()
         {
-            Console.WriteLine($"The giraffe {Name} is moving.");
+            Console.WriteLine($"The {Type} {Name} is moving.");
         }
 
-        public void Eat(FoodType foodType = FoodType.leaves)
+        public override void Eat()
         {
-            Console.WriteLine($"The giraffe {Name} is eating {foodType}.");
+            Console.WriteLine($"The {Type} {Name} is eating {FoodType.leaves}.");
         }
 
         public void FindFood()
         {
-            Console.WriteLine($"The giraffe {Name} with height of {_height}cm is looking for food far up in the tree crowns.");
+            Console.WriteLine($"The {Type} {Name} with height of {_height}cm is looking for food far up in the tree crowns.");
         }
     }
 }

@@ -3,6 +3,7 @@
 namespace OOP_inheritance.Interfaces
 {
     // Interface representing a creature with basic properties and behaviors
+    // Ensuring that all classes adhere to a common contract for properties and methods
     public interface ICreature
     {
         string Gender { get; set; }

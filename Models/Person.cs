@@ -25,9 +25,9 @@ namespace OOP_inheritance.Models
             Console.WriteLine($"{Name} is walking forwards on two legs.");
         }
 
-        public void Eat(FoodType foodType = FoodType.unknown)
+        public override void Eat()
         {
-            Console.WriteLine($"{Name} is eating {foodType}");
+            Console.WriteLine($"The {Name} is eating {FoodType.unknown}.");
         }
     }
 }

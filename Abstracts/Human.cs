@@ -34,9 +34,6 @@ namespace OOP_inheritance.Abstracts
 
         public abstract void Move();
 
-        public virtual void Eat(FoodType foodType = FoodType.unknown)
-        {
-            Console.WriteLine($"{Name} is eating {foodType}.");
-        }
+        public abstract void Eat();
     }
 }
