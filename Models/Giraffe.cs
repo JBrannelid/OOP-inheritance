@@ -7,18 +7,20 @@ namespace OOP_inheritance.Models
     {
         private readonly int _height;
 
-        public Giraffe(string type = "Giraffe", string gender = "Female", string name = "Sky", double weight = 800, int age = 3, int height = 430, AnimalType typOfAnimal = AnimalType.Wild)
-            : base(type, gender, name, weight, age, typOfAnimal)
+        public Giraffe(string type, string gender, string name, double weight, int age, int height, AnimalType typeOfAnimal)
+            : base(type, gender, name, weight, age, typeOfAnimal)
         {
             _height = height;
         }
+        // Override constructor with default values for safty of the program
+        public Giraffe() :this("Giraffe", "Female", "Giraffiii", 800, 4, 430, AnimalType.Wild)
+        { }
 
         public override void PrintInfo()
         {
             base.PrintInfo();
             Console.WriteLine($"Height: {_height}");
         }
-
         public override void MakeSound()
         {
             Console.WriteLine($"The giraffe {Name} bleats.");
@@ -29,7 +31,7 @@ namespace OOP_inheritance.Models
             Console.WriteLine($"The giraffe {Name} is moving.");
         }
 
-        public void Eat(FoodType foodType)
+        public void Eat(FoodType foodType = FoodType.leaves)
         {
             Console.WriteLine($"The giraffe {Name} is eating {foodType}.");
         }

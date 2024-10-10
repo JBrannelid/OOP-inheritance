@@ -10,10 +10,5 @@ namespace OOP_inheritance.Abstracts
             : base(type, gender, name, weight, age, typeOfAnimal)
         {
         }
-
-        public override void PrintInfo()
-        {
-            base.PrintInfo(); // Call the base class's PrintInfo method
-        }
     }
 }

@@ -34,19 +34,13 @@ namespace OOP_inheritance.Abstracts
             Console.WriteLine($"Animal Type: {TypeOfAnimal}");
         }
 
-        public virtual void MakeSound()
-        {
-            Console.WriteLine($"{Name} is making a sound.");
-        }
+        public abstract void MakeSound();
 
-        public virtual void Move()
-        {
-            Console.WriteLine($"{Name} is moving.");
-        }
+        public abstract void Move();
 
-        void ICreature.Eat()
+        public virtual void Eat(FoodType foodType = FoodType.unknown)
         {
-            Console.WriteLine($"{Name} is eating");
+            Console.WriteLine($"{Name} is eating {foodType}.");
         }
     }
 }

@@ -7,10 +7,10 @@ namespace OOP_inheritance.Abstracts
     public abstract class Human : ICreature
     {
         // Fields representing the characteristics of a human
-        public string Gender { get; set; } = "Unknown";
+        public string Gender { get; set; } 
 
-        public string Name { get; set; } = "Unknown";
-        public int Age { get; set; } = 0;
+        public string Name { get; set; }
+        public int Age { get; set; } 
         public AnimalType TypeOfAnimal { get; set; } = AnimalType.Wild;
 
         // Constructor to initialize human properties
@@ -30,19 +30,13 @@ namespace OOP_inheritance.Abstracts
             Console.WriteLine($"Animal Type: {TypeOfAnimal}");
         }
 
-        public virtual void MakeSound()
-        {
-            Console.WriteLine($"{Name} is conversating.");
-        }
+        public abstract void MakeSound();
 
-        public virtual void Move()
-        {
-            Console.WriteLine($"{Name} is moving.");
-        }
+        public abstract void Move();
 
-        public virtual void Eat()
+        public virtual void Eat(FoodType foodType = FoodType.unknown)
         {
-            Console.WriteLine($"{Name} is eating Meat, vegetarian or vegan diet");
+            Console.WriteLine($"{Name} is eating {foodType}.");
         }
     }
 }

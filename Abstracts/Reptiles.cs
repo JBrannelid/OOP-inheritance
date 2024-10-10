@@ -1,4 +1,5 @@
 ﻿using OOP_inheritance.Enums;
+using OOP_inheritance.Interfaces;
 
 namespace OOP_inheritance.Abstracts
 {
@@ -9,11 +10,6 @@ namespace OOP_inheritance.Abstracts
         public Reptiles(string type, string gender, string name, double weight, int age, AnimalType typeOfAnimal = AnimalType.Wild)
             : base(type, gender, name, weight, age, typeOfAnimal)
         {
-        }
-
-        public override void PrintInfo()
-        {
-            base.PrintInfo(); // Call the base class's PrintInfo method
         }
     }
 }

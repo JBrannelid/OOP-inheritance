@@ -4,6 +4,7 @@
 // Course:       Programmering med C# och .NET
 // Lab 6:        OOP Arv
 
+using OOP_inheritance.Abstracts;
 using OOP_inheritance.Enums;
 using OOP_inheritance.Interfaces;
 using OOP_inheritance.Models;
@@ -19,12 +20,14 @@ namespace OOP_Inheritance
             List<ICreature> creatures = new List<ICreature>();
 
             // Add creature to animals List and initialize a value
-            creatures.Add(new Person("Male", "Carl", 24, AnimalType.Domestic));
-            creatures.Add(new Lion("African Lion", "Male", "Leon", 190, 5, 50, AnimalType.Wild));
-            creatures.Add(new Leopard("Leopard", "Male", "Leonardo", 90, 3, 50, AnimalType.Wild));
-            creatures.Add(new SnowLeopard("Snow Leopard", "Male", "John-Snow", 50, 7, 10, AnimalType.Wild));
-            creatures.Add(new Giraffe("Giraffe", "Female", "Giraffiii", 800, 4, 430, AnimalType.Wild));
-            creatures.Add(new Seal("Harbor Seal", "Female", "Sia", 150, 6, "Silver", AnimalType.Domestic));
+            creatures.Add(new Person("Female", "Linnea", 24, AnimalType.Domestic));
+            creatures.Add(item: new Seal("Walrus", "Female", "Wally", 200, 6, "Brown", AnimalType.Wild));
+            creatures.Add(new Giraffe(type: "Giraffe", "Male", "Goofy", 800, 4, 450, AnimalType.Wild));
+
+            // Add default animalt for testing based on the constructor of the class
+            creatures.Add(new Lion()); // Add default Lion
+            creatures.Add(new SnowLeopard()); // Add default Snow Leopard
+            creatures.Add(new Leopard()); // Add default Leopard
 
             // Call the method to display info
             DisplayInfo(creatures);
@@ -35,31 +38,32 @@ namespace OOP_Inheritance
         // Display information about each creatures and specifik actions base on the type of creature
         public static void DisplayInfo(List<ICreature> creatures)
         {
+
+            // Let Lion, Giraffe, Seal do a specifik actions
+            // Call foodtype collect from enum Foodtype and initilized in specific class
             foreach (ICreature animal in creatures)
             {
-                animal.MakeSound();
+                animal.MakeSound(); // Let every animal make a sound
 
-                // Let Lion, Giraffe, Seal and person eat and do a specifik actions
-                if (animal is Lion lion)
+                switch (animal)
                 {
-                    lion.ShowSpeed();
-                    lion.Eat(FoodType.meat); // Call enum Foodtype and the type of food for Lions
+                    case Lion lion:
+                        lion.ShowSpeed();
+                        lion.Eat(); // default is meat
+                        break;
+                    case Giraffe giraffe:
+                        giraffe.FindFood();
+                        giraffe.Eat(); // default is leaves
+                        break;
+                    case Seal seal:
+                        seal.Eat(); // default is fish
+                        seal.Move();
+                        break;
+                    case Person person:
+                        person.Eat(); // default is unknown
+                        break;
                 }
-                else if (animal is Giraffe giraffe)
-                {
-                    giraffe.FindFood();
-                    giraffe.Eat(FoodType.leaves); // Giraffe food type
-                }
-                else if (animal is Seal seal)
-                {
-                    seal.Eat(FoodType.fish); // Seal food type
-                    seal.Move();
-                }
-                else if (animal is Person person)
-                {
-                    person.Eat(); // person food type
-                }
-                Console.WriteLine();  // New line for better console readability 
+                Console.WriteLine(); // New line for better console readability 
             }
         }
     }

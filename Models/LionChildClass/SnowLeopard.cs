@@ -4,10 +4,13 @@ namespace OOP_inheritance.Models.ChildClass
 {
     public class SnowLeopard : Lion
     {
-        public SnowLeopard(string type = "Snow Leopard", string gender = "Male", string name = "Tian", double weight = 50, int age = 7, int speed = 10, AnimalType typOfAnimal = AnimalType.Wild)
-            : base(type, gender, name, weight, age, speed, typOfAnimal)
+        public SnowLeopard(string type, string gender, string name, double weight, int age, int speed, AnimalType typeOfAnimal)
+            : base(type, gender, name, weight, age, speed, typeOfAnimal)
         {
         }
+        // Override constructor with default values for safty of the program
+        public SnowLeopard() : this("Snow Leopard", "Male", "John-Snow", 50, 7, 10, AnimalType.Wild)
+        { }
 
         public override void MakeSound()
         {
@@ -19,7 +22,7 @@ namespace OOP_inheritance.Models.ChildClass
             Console.WriteLine($"The SnowLeopard {Name} is hunting.");
         }
 
-        public new void Eat(FoodType foodType)
+        public new void Eat(FoodType foodType = FoodType.meat)
         {
             Console.WriteLine($"The SnowLeopard {Name} is eating {foodType}.");
         }
