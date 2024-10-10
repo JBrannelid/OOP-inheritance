@@ -1,4 +1,10 @@
-﻿using OOP_inheritance.Enums;
+﻿// Programmer:   Johannes Brannelid
+// Institute:    Chas Academy
+// Program:      Fullstack .NET 2024
+// Course:       Programmering med C# och .NET
+// Lab 6:        OOP Arv
+
+using OOP_inheritance.Enums;
 using OOP_inheritance.Interfaces;
 using OOP_inheritance.Models;
 using OOP_inheritance.Models.ChildClass;
